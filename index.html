@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateus Lins | ML Engineering & Back-end</title>
+  <meta name="description" content="Portfólio profissional de Mateus Lins — estagiário em Engenharia de Machine Learning com foco em desenvolvimento Back-end. Projetos com IA, APIs e análise de dados." />
+  <meta name="keywords" content="Mateus Lins, Machine Learning, Back-end, Python, Java, JavaScript, TypeScript, C, C#, C++, APIs, IA, Deep Learning" />
+  <meta name="author" content="Mateus Lins" />
+  <link rel="canonical" href="/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mateus Lins | ML Engineering & Back-end" />
+  <meta property="og:description" content="Projetos de IA, APIs e análise de dados." />
+  <meta property="og:image" content="./IMG_2565.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mateus Lins | ML Engineering & Back-end" />
+  <meta name="twitter:description" content="Estagiário em ML com foco em Back-end." />
+  <meta name="twitter:image" content="./IMG_2565.png" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --secondary-color: #3b82f6;
+      --accent-color: #22c55e;
+      --light-bg: #f1f5f9;
+      --dark-bg: #0b1220;
+      --text-color: #0f172a;
+      --light-text: #f8fafc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI','Roboto', Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: #ffffffcc; backdrop-filter: blur(6px); border-bottom: 1px solid #e2e8f0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+    .brand { font-weight: 700; color: var(--primary-color); letter-spacing: .5px; }
+    .nav-links { display: flex; gap: 18px; }
+    .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 6px; }
+    .nav-links a:hover { background: #e2e8f0; }
+
+    /* Hero */
+    header { background: linear-gradient(135deg, var(--primary-color), var(--dark-bg)); color: var(--light-text); padding: 70px 0; }
+    .hero { display: grid; grid-template-columns: 1.4fr .9fr; gap: 32px; align-items: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 1px; }
+    .hero .subtitle { font-size: 1.25rem; color: #cbd5e1; margin-bottom: 20px; }
+    .hero-actions { display: flex; gap: 12px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+    .btn-primary { background: var(--secondary-color); color: #fff; }
+    .btn-outline { background: transparent; color: #fff; border: 1px solid #334155; }
+    .btn:hover { transform: translateY(-2px); transition: transform .2s ease; }
+    .hero-photo { justify-self: end; width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 4px solid #1e293b; box-shadow: 0 12px 24px rgba(0,0,0,.25); }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Sections */
+    .section { padding: 80px 0; }
+    .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--primary-color); position: relative; }
+    .section-title::after { content:""; position:absolute; bottom:-12px; left:50%; transform:translateX(-50%); width:60px; height:4px; background:var(--secondary-color); border-radius:4px; }
+
+    /* Sobre */
+    .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; }
+    .profile-image { width: 300px; height: 300px; border-radius: 16px; overflow: hidden; border: 5px solid var(--secondary-color); box-shadow: 0 10px 20px rgba(0,0,0,.15); }
+    .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+    .bio p { margin-bottom: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .chip { background: #fff; border: 1px solid #e2e8f0; border-radius: 999px; padding: 8px 12px; font-weight: 600; }
+
+    /* Formação */
+    .education { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+    .education h4 { color: var(--secondary-color); margin-bottom: 8px; }
+
+    /* Projetos */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .project-card { background: #fff; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,.08); overflow: hidden; display: flex; flex-direction: column; }
+    .project-card img { width: 100%; height: 170px; object-fit: cover; }
+    .project-content { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .tag { font-size:.8rem; background: #eff6ff; color:#1e40af; border:1px solid #bfdbfe; border-radius:999px; padding:4px 10px; }
+    .links { display:flex; gap:12px; margin-top:10px; }
+    .link-btn { text-decoration:none; color:#fff; background:#1e293b; padding:8px 12px; border-radius:8px; font-weight:600; }
+    .link-btn:hover { background:#0f172a; }
+
+    /* Contato */
+    .contact { background: var(--dark-bg); color: var(--light-text); }
+    .contact-inner { display:grid; grid-template-columns: 1.1fr .9fr; gap: 28px; }
+    .contact-card { background: rgba(255,255,255,.06); border: 1px solid #334155; border-radius: 12px; padding: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display:block; margin-bottom:6px; font-weight:600; }
+    .form-control { width:100%; padding:12px 14px; border-radius:8px; border:1px solid #334155; background: rgba(255,255,255,.08); color:#fff; }
+    .form-control:focus { outline:none; border-color:#3b82f6; background: rgba(255,255,255,.12); }
+    .submit-btn { background: var(--secondary-color); color:#fff; border:none; padding:12px 18px; border-radius:8px; cursor:pointer; font-weight:700; }
+
+    /* Footer */
+    footer { background: var(--primary-color); color: var(--light-text); text-align:center; padding:26px 0; }
+    .social-links { display:flex; justify-content:center; gap:16px; margin-bottom:12px; }
+    .social-links a { width:40px; height:40px; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,.12); border-radius:50%; color:#fff; }
+    .social-links a:hover { background: var(--secondary-color); }
+
+    /* Responsive */
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero-photo { justify-self:center; } .about-grid { grid-template-columns: 1fr; } .contact-inner { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { .btn:hover { transform:none; } }
+  </style>
+</head>
+<body>
+  <!-- Navegação -->
+  <nav aria-label="Navegação principal">
+    <div class="container nav-inner">
+      <div class="brand">Mateus Lins</div>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacao">Formação</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <div class="container hero">
+      <div>
+        <h1>Estagiário em Engenharia de Machine Learning</h1>
+        <p class="subtitle">Foco em desenvolvimento Back-end, APIs e sistemas de dados. Busco colaborar em projetos de IA, automação e análise de dados. Aprendendo mais sobre Deep Learning e arquitetura avançada de back-end.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projetos"><i class="fa-solid fa-folder-open"></i> Ver Projetos</a>
+          <a class="btn btn-outline" href="#contato"><i class="fa-solid fa-paper-plane"></i> Entrar em Contato</a>
+        </div>
+      </div>
+      <div class="hero-photo" aria-hidden="true">
+        <img src="./IMG_5010.jpg" alt="Foto profissional de Mateus Lins" loading="lazy" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre Mim -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="about-grid">
+        <div class="profile-image">
+          <img src="./IMG_45445.png" alt="Foto de perfil de Mateus Lins" loading="lazy" />
+        </div>
+        <div class="bio">
+          <p>Sou o Mateus, estagiário em Engenharia de Machine Learning com foco em desenvolvimento Back-end. Trabalho com modelos de aprendizado de máquina e sistemas back-end, buscando soluções escaláveis e robustas.</p>
+          <p>Tenho interesse em projetos de inteligência artificial, criação de APIs e análise de dados. No momento, aprofundo conhecimentos em implantação de modelos, escalabilidade de sistemas e Deep Learning.</p>
+          <div class="chips" aria-label="Habilidades principais">
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">C</span>
+            <span class="chip">C#</span>
+            <span class="chip">C++</span>
+            <span class="chip">APIs REST</span>
+            <span class="chip">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Técnicas -->
+  <section id="habilidades" class="section">
+    <div class="container">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="chips">
+        <span class="chip">Estruturação de APIs</span>
+        <span class="chip">Modelagem de dados</span>
+        <span class="chip">Versionamento Git</span>
+        <span class="chip">Testes e Validação</span>
+        <span class="chip">Deploy & CI/CD</span>
+        <span class="chip">Integração com serviços externos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formação Acadêmica -->
+  <section id="formacao" class="section">
+    <div class="container">
+      <h2 class="section-title">Formação Acadêmica</h2>
+      <div class="education" role="list">
+        <div role="listitem">
+          <h4>Análise e Desenvolvimento de Sistemas (ADS)</h4>
+          <p>Formando UNIP — 4º semestre</p>
+          <p>Ênfase em desenvolvimento Back-end, engenharia de software e fundamentos de ciência de dados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="section">
+    <div class="container">
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <div class="projects-grid">
+        <!-- CRUD de Usuários -->
+        <article class="project-card">
+          <img src="https://opengraph.githubassets.com/1/TeuzLins/CRUD-de-Usuarios" alt="Imagem do repositório CRUD de Usuários" loading="lazy" />
+          <div class="project-content">
+            <h3>CRUD de Usuários</h3>
+            <p>Aplicação com operações de criar, listar, editar e excluir usuários. Interface rápida e modular.</p>
+            <div class="tags">
+              <span class="tag">Vite</span><span class="tag">TypeScript</span><span class="tag">JSON Server</span>
+            </div>
+            <div class="links">
+              <a class="link-btn" href="https://github.com/TeuzLins/CRUD-de-Usuarios" target="_blank" rel="noopener noreferrer">Repositório</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sistema de Hotel -->
+        <article class="project-card">
+          <img src="https://opengraph.githubassets.com/1/TeuzLins/Sistema-de-hotel" alt="Imagem do repositório Sistema de hotel" loading="lazy" />
+          <div class="project-content">
+            <h3>Sistema de Hotel</h3>
+            <p>Monorepo com API e Web: autenticação JWT, ORM Prisma e interface moderna.</p>
+            <div class="tags">
+              <span class="tag">Express</span><span class="tag">Prisma</span><span class="tag">React</span><span class="tag">Vite</span>
+            </div>
+            <div class="links">
+              <a class="link-btn" href="https://github.com/TeuzLins/Sistema-de-hotel" target="_blank" rel="noopener noreferrer">Repositório</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto com Autenticação -->
+        <article class="project-card">
+          <img src="https://opengraph.githubassets.com/1/TeuzLins/Projeto-com-Autenticacao" alt="Imagem do repositório Projeto com Autenticação" loading="lazy" />
+          <div class="project-content">
+            <h3>Projeto com Autenticação</h3>
+            <p>Fluxo completo de login, cadastro e recuperação de senha com Firebase Authentication.</p>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Firebase Auth</span><span class="tag">Vite</span>
+            </div>
+            <div class="links">
+              <a class="link-btn" href="https://github.com/TeuzLins/Projeto-com-Autenticacao" target="_blank" rel="noopener noreferrer">Repositório</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Users API -->
+        <article class="project-card">
+          <img src="https://github.com/TeuzLins/UsersApi" alt="Imagem do repositório Users API" loading="lazy" />
+          <div class="project-content">
+            <h3>Users API</h3>
+            <p>API REST de usuários com boas práticas de camadas e validação.</p>
+            <div class="tags">
+              <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST</span>
+            </div>
+            <div class="links">
+              <a class="link-btn" href="https://github.com/TeuzLins/UsersApi" target="_blank" rel="noopener noreferrer">Repositório</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <div>
+        <h2 id="contact-title" class="section-title" style="color:#fff">Contato</h2>
+        <div class="contact-card">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" class="form-control" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" class="form-control" placeholder="seuemail@exemplo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" class="form-control" placeholder="Como posso ajudar?" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+            <p id="form-feedback" role="status" style="margin-top:10px"></p>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="contact-card" aria-label="Informações de contato">
+          <p><i class="fa-solid fa-envelope"></i> mateus.prestes.contato@gmail.com</p>
+          <p><i class="fa-solid fa-link"></i> <a href="https://www.linkedin.com/in/mateus-de-lima-lins-304a812b7" target="_blank" rel="noopener noreferrer" style="color:#93c5fd">LinkedIn</a></p>
+          <p><i class="fa-brands fa-github"></i> <a href="https://github.com/TeuzLins" target="_blank" rel="noopener noreferrer" style="color:#93c5fd">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/mateus-de-lima-lins-304a812b7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/TeuzLins" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:mateus.prestes.contato@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <small>© <span id="year"></span> Mateus Lins — Todos os direitos reservados.</small>
+  </footer>
+
+  <script>
+    // Atualiza ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Formulário funcional via mailto
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!name || !emailRegex.test(email) || !message) {
+        feedback.textContent = 'Por favor, preencha os campos corretamente.';
+        feedback.style.color = '#f87171';
+        return;
+      }
+      const subject = encodeURIComponent(`Contato via Portfólio - ${name}`);
+      const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+      const mailto = `mailto:mateus.prestes.contato@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+      feedback.textContent = 'Abrindo seu cliente de email...';
+      feedback.style.color = '#22c55e';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
